@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Polo RGB — Privacy Policy</title>
+  <style>
+    :root {
+      --bg: #07070b;
+      --fg: #ffffff;
+      --dim: #b5b5c0;
+      --faint: #6c6c78;
+      --accent: #aa3cdc;
+      --card: #11111a;
+      --rule: #25252f;
+    }
+    * { box-sizing: border-box; }
+    html, body { background: var(--bg); color: var(--fg); margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI",
+                   Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 64px 24px 96px; }
+    header {
+      display: flex; align-items: center; gap: 16px;
+      padding-bottom: 32px; border-bottom: 1px solid var(--rule);
+    }
+    .icon {
+      width: 64px; height: 64px; border-radius: 16px;
+      background: conic-gradient(
+        from 0deg,
+        #ff3b30, #ffcc00, #34c759, #5ac8fa, #007aff, #af52de, #ff3b30
+      );
+      box-shadow: 0 0 24px rgba(170, 60, 220, 0.4);
+      position: relative;
+      flex-shrink: 0;
+    }
+    .icon::after {
+      content: "";
+      position: absolute; inset: 18%;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%, #fff 0%, transparent 65%);
+      opacity: .5;
+    }
+    h1 { font-size: 28px; margin: 0 0 4px; letter-spacing: -0.02em; }
+    .sub { color: var(--dim); font-size: 14px; margin: 0; }
+    h2 { font-size: 18px; margin: 40px 0 12px; letter-spacing: -0.01em; }
+    p { color: var(--dim); margin: 0 0 12px; }
+    strong { color: var(--fg); }
+    code { color: #ddd; background: #1c1c25; padding: 2px 6px; border-radius: 4px; font-size: 13px; }
+    table {
+      width: 100%; border-collapse: collapse; margin: 12px 0 20px;
+      font-size: 14px;
+    }
+    th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--rule); }
+    th { color: var(--faint); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: .08em; }
+    td { color: var(--dim); }
+    td:first-child { color: var(--fg); font-weight: 500; }
+    ul { padding-left: 20px; color: var(--dim); }
+    li { margin: 4px 0; }
+    .no::before { content: "✕  "; color: #ff3b30; }
+    .summary {
+      background: var(--card); padding: 18px 20px;
+      border-radius: 12px; border: 1px solid var(--rule);
+      margin: 16px 0 28px;
+    }
+    footer {
+      margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--rule);
+      color: var(--faint); font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="icon" aria-hidden="true"></div>
+      <div>
+        <h1>Polo RGB — Privacy Policy</h1>
+        <p class="sub">Last updated: 2026-04-29 · App ID <code>com.polocreations.polorgb</code></p>
+      </div>
+    </header>
+
+    <div class="summary">
+      <p style="color:var(--fg); margin: 0;">
+        <strong>Polo RGB does not collect, store, transmit, or share any personal data.</strong>
+      </p>
+      <p style="margin-top: 8px;">
+        The app is a local Bluetooth Low Energy (BLE) controller for ELK-BLEDOM-compatible RGB LED strips.
+        All communication happens directly between your phone and your LED controller — no servers,
+        no analytics, no tracking, no third parties.
+      </p>
+    </div>
+
+    <h2>What the app accesses</h2>
+    <table>
+      <thead>
+        <tr><th>Permission</th><th>Why it's needed</th><th>Where it goes</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>BLUETOOTH_SCAN<br><span style="color:var(--faint); font-size:12px">(Android 12+)</span></td>
+          <td>Discover nearby ELK-BLEDOM controllers</td>
+          <td>Local, never leaves the device</td>
+        </tr>
+        <tr>
+          <td>BLUETOOTH_CONNECT<br><span style="color:var(--faint); font-size:12px">(Android 12+)</span></td>
+          <td>Pair and exchange commands with the LED controller</td>
+          <td>Local, never leaves the device</td>
+        </tr>
+        <tr>
+          <td>ACCESS_FINE_LOCATION<br><span style="color:var(--faint); font-size:12px">(Android 6–11)</span></td>
+          <td>Required by older Android versions for BLE scanning. The app declares <code>neverForLocation</code> on Android 12+ so location is <strong>not</strong> used.</td>
+          <td>Local, never leaves the device</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      The <code>neverForLocation</code> flag explicitly tells Android that the app does
+      <strong>not</strong> use Bluetooth scan results to derive your location.
+    </p>
+
+    <h2>What the app stores</h2>
+    <p>The following information is stored <strong>only on your device</strong> in the app's private storage:</p>
+    <ul>
+      <li>The names you assign to your saved LED controllers</li>
+      <li>The Bluetooth MAC addresses of those controllers</li>
+      <li>Your saved color and effect presets (color, effect, brightness, speed)</li>
+    </ul>
+    <p>This data is never transmitted off your device. Uninstalling the app deletes all of it.</p>
+
+    <h2>What the app does NOT do</h2>
+    <ul style="list-style: none; padding: 0;">
+      <li class="no">No accounts, no sign-up, no login</li>
+      <li class="no">No analytics, telemetry, or crash reporting</li>
+      <li class="no">No advertising or ad SDKs</li>
+      <li class="no">No data sold or shared with third parties</li>
+      <li class="no">No internet connection required (the app never connects to any server)</li>
+      <li class="no">No location tracking</li>
+    </ul>
+
+    <h2>Children's privacy</h2>
+    <p>The app does not knowingly collect data from anyone, including children under 13.</p>
+
+    <h2>Changes</h2>
+    <p>
+      If this policy ever changes (for example, if a future version adds an optional cloud feature),
+      the change will be reflected in this page with a new "Last updated" date.
+      The current source-of-truth copy lives in the project repository's
+      <code>PRIVACY_POLICY.md</code> file.
+    </p>
+
+    <h2>Contact</h2>
+    <p>
+      For questions about this policy, please open an issue on the project's GitHub repository
+      or contact Polo Creations directly.
+    </p>
+
+    <footer>
+      Polo Creations · Polo RGB · v1.0
+    </footer>
+  </div>
+</body>
+</html>
